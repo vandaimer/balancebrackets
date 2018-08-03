@@ -34,11 +34,11 @@ export const check = (characterLeft, characterRight, input) => {
 };
 
 export const simpleCheck = input => {
- if(!input) return false;
- const pattern = /([\[\]\(\)\{\}])+/g;
- const match = input.match(pattern);
- if(!match) return false;
- return match[0] === input;
+  if(!input) return false;
+  const pattern = /([\[\]\(\)\{\}])+/g;
+  const match = input.match(pattern);
+  if(!match) return false;
+  return match[0] === input;
 }
 
 export default balanceBrackets;
