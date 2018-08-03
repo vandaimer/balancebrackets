@@ -1,40 +1,40 @@
-import BalanceBrackets, { PARENTHESES_LEFT, PARENTHESES_RIGHT, BRACKETS_LEFT, BRACKETS_RIGHT, SQUARE_BRACKETS_LEFT, SQUARE_BRACKETS_RIGHT, simpleCheck, check } from '../BalanceBrackets';
+import BalanceBracket, { PARENTHESES_LEFT, PARENTHESES_RIGHT, BRACKETS_LEFT, BRACKETS_RIGHT, SQUARE_BRACKETS_LEFT, SQUARE_BRACKETS_RIGHT, simpleCheck, check } from '../BalanceBracket';
 
 
-describe('BalanceBrackets.balancedbrackets', () => {
+describe('BalanceBracket.balancedbrackets', () => {
   it('should return true with the follow input: (){}[]', () => {
-    const result = BalanceBrackets('(){}[]');
+    const result = BalanceBracket('(){}[]');
     expect(result).toBe(true);
   });
 
   it('should return true with the follow input: [{()}](){}', () => {
-    const result = BalanceBrackets('[{()}](){}');
+    const result = BalanceBracket('[{()}](){}');
     expect(result).toBe(true);
   });
 
   it('should return false with the follow input: []{()', () => {
-    const result = BalanceBrackets('[]{()');
+    const result = BalanceBracket('[]{()');
     expect(result).toBe(false);
   });
 
   it('should return false with the follow input: [{)]', () => {
-    const result = BalanceBrackets('[{)]');
+    const result = BalanceBracket('[{)]');
     expect(result).toBe(false);
   });
 
   it('should return false if the input is empty', () => {
-    const result = BalanceBrackets('');
+    const result = BalanceBracket('');
     expect(result).toBe(false);
   });
 
   it('should return false if the input is undefined', () => {
-    const result = BalanceBrackets();
+    const result = BalanceBracket();
     expect(result).toBe(false);
   });
 });
 
 
-describe('BalanceBrackets.check', () => {
+describe('BalanceBracket.check', () => {
   it('should return false if input has only parentheses character and wrong pattern', () => {
     const result = check(PARENTHESES_LEFT, PARENTHESES_RIGHT, ')(');
     expect(result).toBe(false);
@@ -57,7 +57,7 @@ describe('BalanceBrackets.check', () => {
 });
 
 
-describe('BalanceBrackets.simpleCheck', () => {
+describe('BalanceBracket.simpleCheck', () => {
   it('should return false if input is undefined', () => {
     const result = simpleCheck();
     expect(result).toBe(false);
