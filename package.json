@@ -7,8 +7,8 @@
     "build": "babel src -s -D -d dist --presets env",
     "coverage": "jest --coverage --forceExit",
     "dev": "nodemon -w src --exec \"babel-node src --presets env\"",
-    "run":"yarn build && node dist"
     "dev:coverage": "jest --watch --coverage",
+    "start": "yarn build && node dist",
     "test": "jest"
   },
   "author": "",
