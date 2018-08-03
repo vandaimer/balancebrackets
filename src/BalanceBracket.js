@@ -5,9 +5,8 @@ export const BRACKETS_RIGHT = '}';
 export const SQUARE_BRACKETS_LEFT = '[';
 export const SQUARE_BRACKETS_RIGHT = ']';
 
-
 const balanceBrackets = input => {
-  if(!simpleCheck(input)) return false;
+  if (!simpleCheck(input)) return false;
 
   const parenthere = check(PARENTHESES_LEFT, PARENTHESES_RIGHT, input);
   const bracket = check(BRACKETS_LEFT, BRACKETS_RIGHT, input);
@@ -20,25 +19,25 @@ export const check = (characterLeft, characterRight, input) => {
   let counter = 0;
   const characterList = input.split('');
 
-  for(let i=0; i<characterList.length; i++) {
-		const value = characterList[i];
-    if(value == characterLeft) {
+  for (let i = 0; i < characterList.length; i++) {
+    const value = characterList[i];
+    if (value == characterLeft) {
       counter++;
     } else if (value == characterRight) {
       counter--;
     }
-    if(counter < 0) return false;
+    if (counter < 0) return false;
   }
 
   return counter == 0;
 };
 
 export const simpleCheck = input => {
-  if(!input) return false;
+  if (!input) return false;
   const pattern = /([\[\]\(\)\{\}])+/g;
   const match = input.match(pattern);
-  if(!match) return false;
+  if (!match) return false;
   return match[0] === input;
-}
+};
 
 export default balanceBrackets;

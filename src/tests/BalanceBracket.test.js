@@ -1,5 +1,13 @@
-import BalanceBracket, { PARENTHESES_LEFT, PARENTHESES_RIGHT, BRACKETS_LEFT, BRACKETS_RIGHT, SQUARE_BRACKETS_LEFT, SQUARE_BRACKETS_RIGHT, simpleCheck, check } from '../BalanceBracket';
-
+import BalanceBracket, {
+  PARENTHESES_LEFT,
+  PARENTHESES_RIGHT,
+  BRACKETS_LEFT,
+  BRACKETS_RIGHT,
+  SQUARE_BRACKETS_LEFT,
+  SQUARE_BRACKETS_RIGHT,
+  simpleCheck,
+  check,
+} from '../BalanceBracket';
 
 describe('BalanceBracket.balancedbrackets', () => {
   it('should return true with the follow input: (){}[]', () => {
@@ -33,7 +41,6 @@ describe('BalanceBracket.balancedbrackets', () => {
   });
 });
 
-
 describe('BalanceBracket.check', () => {
   it('should return false if input has only parentheses character and wrong pattern', () => {
     const result = check(PARENTHESES_LEFT, PARENTHESES_RIGHT, ')(');
@@ -55,7 +62,6 @@ describe('BalanceBracket.check', () => {
     expect(result).toBe(true);
   });
 });
-
 
 describe('BalanceBracket.simpleCheck', () => {
   it('should return false if input is undefined', () => {
