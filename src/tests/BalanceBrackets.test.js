@@ -1,4 +1,37 @@
-import { PARENTHESES_LEFT, PARENTHESES_RIGHT, BRACKETS_LEFT, BRACKETS_RIGHT, SQUARE_BRACKETS_LEFT, SQUARE_BRACKETS_RIGHT, simpleCheck, check } from '../BalanceBrackets';
+import BalanceBrackets, { PARENTHESES_LEFT, PARENTHESES_RIGHT, BRACKETS_LEFT, BRACKETS_RIGHT, SQUARE_BRACKETS_LEFT, SQUARE_BRACKETS_RIGHT, simpleCheck, check } from '../BalanceBrackets';
+
+
+describe('BalanceBrackets.balancedbrackets', () => {
+  it('should return true with the follow input: (){}[]', () => {
+    const result = BalanceBrackets('(){}[]');
+    expect(result).toBe(true);
+  });
+
+  it('should return true with the follow input: [{()}](){}', () => {
+    const result = BalanceBrackets('[{()}](){}');
+    expect(result).toBe(true);
+  });
+
+  it('should return false with the follow input: []{()', () => {
+    const result = BalanceBrackets('[]{()');
+    expect(result).toBe(false);
+  });
+
+  it('should return false with the follow input: [{)]', () => {
+    const result = BalanceBrackets('[{)]');
+    expect(result).toBe(false);
+  });
+
+  it('should return false if the input is empty', () => {
+    const result = BalanceBrackets('');
+    expect(result).toBe(false);
+  });
+
+  it('should return false if the input is undefined', () => {
+    const result = BalanceBrackets();
+    expect(result).toBe(false);
+  });
+});
 
 
 describe('BalanceBrackets.check', () => {
