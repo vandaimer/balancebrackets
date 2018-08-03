@@ -16,7 +16,7 @@ const balanceBrackets = input => {
   return parenthere && bracket && squareBracket;
 };
 
-const check = (characterLeft, characterRight, input) => {
+export const check = (characterLeft, characterRight, input) => {
   let counter = 0;
   const characterList = input.split('');
 
