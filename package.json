@@ -8,7 +8,7 @@
     "coverage": "jest --coverage --forceExit",
     "dev": "nodemon -w src --exec \"babel-node src --presets env\"",
     "dev:coverage": "jest --watch --coverage",
-    "start": "yarn build && node dist",
+    "start": "node dist",
     "test": "jest",
     "prettier": "prettier --write",
     "lint": "eslint ."
