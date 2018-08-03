@@ -2,8 +2,8 @@ const PARENTHESES_LEFT = '(';
 const PARENTHESES_RIGHT = ')';
 const BRACKETS_LEFT = '{';
 const BRACKETS_RIGHT = '}';
-const SQUARE_BRACKETS_LEFT = '{';
-const SQUARE_BRACKETS_RIGHT = '}';
+const SQUARE_BRACKETS_LEFT = '[';
+const SQUARE_BRACKETS_RIGHT = ']';
 
 
 const balanceBrackets = input => {
