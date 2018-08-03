@@ -33,7 +33,7 @@ export const check = (characterLeft, characterRight, input) => {
   return counter == 0;
 };
 
-const simpleCheck = input => {
+export const simpleCheck = input => {
  if(!input) return false;
  const pattern = /([\[\]\(\)\{\}])+/g;
  const match = input.match(pattern);
