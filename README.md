@@ -1,4 +1,4 @@
-###Balanced Brackets
+### Balanced Brackets
 
 # Recebe uma sequência de caracteres e determina se a sequência está correta ou não.
 
