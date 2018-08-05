@@ -24,3 +24,11 @@
 - ```[{()}](){}``` é válida
 - ```[]{()``` não é válida
 - ```[{)]``` não é not válida
+
+# Stack
+- NodeJS
+- Jest test
+- Docker
+- Babel
+- Eslint
+- Prettier
